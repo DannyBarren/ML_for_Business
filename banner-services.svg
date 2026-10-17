@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#161b22;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1280" height="640" fill="url(#bg)"/>
+
+  <!-- Subtle tech/stats background elements -->
+  <g opacity="0.12" font-family="monospace" font-size="13" fill="#58a6ff">
+    <text x="30" y="70">import pandas as pd</text>
+    <text x="30" y="95">from sklearn.pipeline import Pipeline</text>
+    <text x="30" y="120">model = HistGradientBoostingClassifier()</text>
+    <text x="980" y="100">feature_importance_</text>
+    <text x="980" y="130">precision: 0.91</text>
+    <text x="980" y="160">expected_value: +$14.2k</text>
+  </g>
+
+  <!-- Decorative bars -->
+  <g opacity="0.2" fill="#238636">
+    <rect x="80" y="520" width="160" height="50" rx="4"/>
+    <rect x="280" y="490" width="200" height="80" rx="4"/>
+    <rect x="520" y="540" width="140" height="30" rx="4"/>
+    <rect x="700" y="500" width="240" height="70" rx="4"/>
+  </g>
+
+  <!-- Main content -->
+  <text x="640" y="180" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="700" fill="#f0f6fc" filter="url(#glow)">Danny Barren</text>
+  <text x="640" y="230" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="500" fill="#58a6ff">AI/ML & Automation Engineer</text>
+
+  <text x="640" y="320" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="600" fill="#f0f6fc">Custom AI/ML & Automation Engineering</text>
+  <text x="640" y="365" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="26" fill="#c9d1d9">for SMBs and Solo Owner/Operators</text>
+
+  <text x="640" y="450" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="500" fill="#8b949e">Automation for Professionals</text>
+  <text x="640" y="485" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#6e7681">work for your business, not on your business</text>
+</svg>
