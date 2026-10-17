@@ -42,58 +42,58 @@ No neural networks. No unnecessary complexity. Just practical models, hyperparam
 
 ## Course Structure
 
-The course is organized into practical modules with accompanying notebooks:
+| Module | Lesson | Notebook |
+|---|---|---|
+| 1. When to Use ML (and When Not To) | [Lesson](lessons/module_01_when_to_use_ml.md) | Built into every notebook |
+| 2. Data Prep Essentials | [Lesson](lessons/module_02_data_prep.md) | Built into every notebook |
+| 3. Regression for Forecasting and Drivers | [Lesson](lessons/module_03_regression.md) | [01 · Linear Regression](notebooks/01_linear_regression.ipynb) |
+| 4. Classification for Yes/No Decisions | [Lesson](lessons/module_04_classification.md) | [02 · Logistic Regression](notebooks/02_logistic_regression.ipynb) |
+| 5. Tree-Based Models and Ensembles | [Lesson](lessons/module_05_tree_models.md) | [03 · Decision Tree](notebooks/03_decision_tree.ipynb) · [04 · Random Forest](notebooks/04_random_forest_churn.ipynb) · [05 · Gradient Boosting](notebooks/05_gradient_boosting.ipynb) |
+| 6. Clustering and Customer Segmentation | [Lesson](lessons/module_06_clustering.md) | Follow the lesson outline (dedicated notebook coming later) |
+| 7. Hyperparameter Tuning and Validation | [Lesson](lessons/module_07_tuning.md) | Tuning sections inside notebooks 01–06 |
+| 8. Interpreting Results and Turning Them into Decisions | [Lesson](lessons/module_08_interpretation.md) | Interpretation sections inside notebooks 01–06 |
+| 9. End-to-End Templates and Case Studies | [Lesson](lessons/module_09_end_to_end.md) | [06 · End-to-End Churn](notebooks/06_end_to_end_churn.ipynb) |
 
-1. **Foundations** — When to use ML, problem framing, and data fundamentals
-2. **Regression** — Predicting numbers (sales, demand, costs)
-3. **Classification** — Predicting categories (churn, risk, yes/no)
-4. **Tree-Based Models** — Decision Trees, Random Forests, and feature importance
-5. **Boosting** — Higher performance on tabular data
-6. **Clustering & Segmentation** — Finding groups without labels
-7. **Hyperparameter Tuning** — Practical search strategies and small-data tactics
-8. **Interpretation & Insights** — Turning model outputs into business actions
-9. **End-to-End Templates** — Full workflows you can adapt immediately
+---
+
+## Notebooks (Open in Colab)
+
+Each notebook runs end to end on synthetic demo data when you leave `CSV_PATH = None`. To use your own data, change the file path and a few column names in the **CONFIG** cell.
+
+| Notebook | Open in Colab |
+|---|---|
+| [01 · Linear Regression](notebooks/01_linear_regression.ipynb) — sales / demand forecasting | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/DannyBarren/ML_for_Business/blob/main/notebooks/01_linear_regression.ipynb) |
+| [02 · Logistic Regression](notebooks/02_logistic_regression.ipynb) — churn / lead scoring | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/DannyBarren/ML_for_Business/blob/main/notebooks/02_logistic_regression.ipynb) |
+| [03 · Decision Tree](notebooks/03_decision_tree.ipynb) — classification or regression | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/DannyBarren/ML_for_Business/blob/main/notebooks/03_decision_tree.ipynb) |
+| [04 · Random Forest Churn](notebooks/04_random_forest_churn.ipynb) — ranking customers to contact | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/DannyBarren/ML_for_Business/blob/main/notebooks/04_random_forest_churn.ipynb) |
+| [05 · Gradient Boosting](notebooks/05_gradient_boosting.ipynb) — classification or regression | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/DannyBarren/ML_for_Business/blob/main/notebooks/05_gradient_boosting.ipynb) |
+| [06 · End-to-End Churn Case Study](notebooks/06_end_to_end_churn.ipynb) — data → decisions | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/DannyBarren/ML_for_Business/blob/main/notebooks/06_end_to_end_churn.ipynb) |
 
 ---
 
 ## How to Use This Repository
 
-1. **Clone or download** the repo, or browse the notebooks directly.
-2. **Open any notebook in Google Colab** (recommended for zero setup) using the links below or the “Open in Colab” badges once notebooks are added.
-3. **Replace the placeholders**:
-   - File path / upload your CSV
-   - Target column name
-   - Feature columns
-4. **Run the cells** and read the comments. Each notebook is designed to be self-explanatory.
-5. **Extract insights** using the interpretation sections and apply them to your business.
+1. **Read the lesson** for the module you care about (plain-language Markdown in [`lessons/`](lessons/)).
+2. **Open the matching notebook in Google Colab** with the badges above (zero local setup).
+3. **Edit only the CONFIG cell**: file path, target column, feature columns, and (for classification) rough business numbers like cost to contact and value of a save.
+4. **Run top to bottom.** Comments explain what each step means for the business.
+5. **Use the interpretation and recommendations sections** to turn scores into actions.
 
-### Recommended Starting Notebooks
-- Linear Regression for forecasting
-- Logistic Regression for churn or binary decisions
-- Random Forest for feature importance
-- KMeans for customer segmentation
+### Small vs. large data
+
+Notebooks auto-detect size (or you can set `DATA_SIZE_MODE`). On **small** data they use repeated cross-validation, smaller search grids, and stronger simplification. On **large** data they use fewer folds and may tune on a sample. Prefer a simpler model when it ties a more complex one.
 
 ---
 
-## Getting Started (Recommended: Google Colab)
+## Requirements
 
-You do not need to install anything locally.
+Listed in [`requirements.txt`](requirements.txt):
 
-1. Click any notebook link (coming soon as notebooks are added).
-2. Sign in with a Google account if prompted.
-3. Upload your CSV or point to a file path.
-4. Follow the comments and run the cells.
+- `pandas`, `numpy`
+- `scikit-learn` ≥ 1.2
+- `matplotlib`, `seaborn`, `scipy`, `joblib`
 
-All notebooks use only `pandas` and `scikit-learn` by default. Optional upgrades (XGBoost, SHAP) are noted where relevant.
-
----
-
-## Tools & Prerequisites
-
-- **Python** (via Colab or local Jupyter)
-- **pandas** and **scikit-learn** (pre-installed in Colab)
-- Basic familiarity with spreadsheets or data tables
-- No prior machine learning experience required
+Optional upgrades (XGBoost, LightGBM) are noted inside some notebooks; they are not required.
 
 ---
 
@@ -107,12 +107,6 @@ This course prioritizes:
 - **Working with the data you actually have** (including small datasets)
 
 You will leave with working templates and the ability to generate insights from your own data.
-
----
-
-## Contributing & Updates
-
-Notebooks and lesson materials will be added as they are completed. Star the repo or watch it for updates.
 
 ---
 

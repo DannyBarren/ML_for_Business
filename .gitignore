@@ -1,0 +1,17 @@
+# Jupyter / Python
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Files the notebooks create when you run them
+*.joblib
+churn_*.csv
+*_call_list*.csv
+tuning_log*.csv
+*_test_predictions.csv
+churn_business_memo.md
+decision_tree_rules.txt
