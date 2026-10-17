@@ -119,3 +119,5 @@ Notebooks and lesson materials will be added as they are completed. Star the rep
 **Built for business people who want results.**
 
 [Danny Barren](https://github.com/DannyBarren) · [dannybarren.com](https://dannybarren.com)
+
+![banner_2](qdkxO.jpg)
