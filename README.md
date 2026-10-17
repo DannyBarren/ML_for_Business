@@ -6,6 +6,8 @@
 
 ---
 
+![banner](htjeK.jpg)
+
 ## Why This Course?
 
 Most machine learning courses are either too theoretical or focused on deep learning that requires massive datasets. This course is different.
