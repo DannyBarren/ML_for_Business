@@ -6,7 +6,7 @@
 
 ---
 
-![banner](htjeK.jpg)
+![banner](LwKSE.jpg)
 
 ## Why This Course?
 
