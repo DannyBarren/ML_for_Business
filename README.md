@@ -71,6 +71,16 @@ Each notebook runs end to end on synthetic demo data when you leave `CSV_PATH = 
 
 ---
 
+## Real-World Examples
+
+Beyond the structured course, the [`examples/`](examples/) folder contains original, end-to-end models created by Danny Barren for specific business problems. These are not course lessons — they are inspiration examples showing how the same techniques can be applied to concrete, high-value use cases.
+
+Each example notebook generates its own synthetic demo data (so it runs immediately) and includes business metrics, interpretation, and recommended next actions. They cover topics such as loan default prediction, fuel waste analysis for drivers, marketing lead conversion, sales driver analysis, and customer segmentation.
+
+**See the full list and how to use them:** [examples/README.md](examples/README.md)
+
+---
+
 ## How to Use This Repository
 
 1. **Read the lesson** for the module you care about (plain-language Markdown in [`lessons/`](lessons/)).
